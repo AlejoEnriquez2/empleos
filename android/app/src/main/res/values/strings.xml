@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">empleos</string>
+    <string name="title_activity_main">empleos</string>
+    <string name="package_name">ec.edu.ups.pm.empleosmoviles</string>
+    <string name="custom_url_scheme">ec.edu.ups.pm.empleosmoviles</string>
+</resources>

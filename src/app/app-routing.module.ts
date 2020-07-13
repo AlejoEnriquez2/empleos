@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'editar-empleo/:id',
     loadChildren: () => import('./shared/pages/editar-empleo/editar-empleo.module').then( m => m.EditarEmpleoPageModule)
+  },
+  {
+    path: 'crear-empleo',
+    loadChildren: () => import('./shared/pages/crear-empleo/crear-empleo.module').then( m => m.CrearEmpleoPageModule)
   }
 ];
 

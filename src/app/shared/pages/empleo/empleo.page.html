@@ -7,7 +7,7 @@
 <ion-content *ngIf="(empleo | async) as empleo">
 
   <ion-card>
-    <img src="../../../../assets/avatar.png">
+    <img [src]="empleo.image.url" />
     <ion-card-header>
       <ion-card-subtitle>Empleo</ion-card-subtitle>
       <ion-card-title>{{empleo.titulo}}</ion-card-title>
