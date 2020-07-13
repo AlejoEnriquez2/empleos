@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista-empleos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      Cosas
+    </ion-list-header>
+
+    <ion-item *ngFor="let cosa of cosas">
+      <ion-avatar slot="start">
+        <img src="../../../../assets/avatar.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{cosa.id}}</h2>
+        <p>{{cosa.nombre}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Empleos
+    </ion-list-header>
+
+    <ion-item *ngFor="let empleo of empleados | async">
+      <ion-avatar slot="start">
+        <img src="../../../../assets/avatar.png">
+      </ion-avatar>
+      <ion-label (click)="showEmpleo(empleo.uid)">
+        <h3>{{empleo.titulo}}</h3>
+        <p>{{empleo.descripcion}}</p>
+        <h2>{{empleo.salario}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
