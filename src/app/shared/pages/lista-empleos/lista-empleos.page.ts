@@ -18,14 +18,18 @@ export class ListaEmpleosPage implements OnInit {
 
   ngOnInit() {
     this.empleados = this.empleosService.getEmpleos()
-
+/*
     this.cosas.push({id: 10, nombre: "xya"})
     this.cosas.push({id: 20, nombre: "abc"})
-    this.cosas.push({id: 30, nombre: "def"})
+    this.cosas.push({id: 30, nombre: "def"})*/
   }
 
   showEmpleo(id: any){
     this.router.navigate([`empleo/${id}`])
+  }
+
+  trackByFn(index, obj) {
+    return obj.uid;
   }
 
 }

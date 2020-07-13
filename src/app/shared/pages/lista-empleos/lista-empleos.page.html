@@ -27,14 +27,13 @@
       Empleos
     </ion-list-header>
 
-    <ion-item *ngFor="let empleo of empleados | async">
+    <ion-item *ngFor="let empleo of empleados | async; trackBy: trackByFn">
       <ion-avatar slot="start">
         <img src="../../../../assets/avatar.png">
       </ion-avatar>
       <ion-label (click)="showEmpleo(empleo.uid)">
         <h3>{{empleo.titulo}}</h3>
         <p>{{empleo.descripcion}}</p>
-        <h2>{{empleo.salario}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>

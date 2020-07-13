@@ -13,7 +13,7 @@ export class EmpleosService {
   constructor(private afs: AngularFirestore) { }
 
   getEmpleos(): Observable<any[]>{
-    return this.afs.collection('empleos', ref => ref.orderBy('fecha', 'asc')).valueChanges();
+    return this.afs.collection('empleos', ref => ref.orderBy('titulo', 'asc')).valueChanges();
   }
 
   getEmpleosPorNombre(): Observable<any[]>{
