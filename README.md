@@ -1,0 +1,2 @@
+# empleos
+Captura de funcionamiento
