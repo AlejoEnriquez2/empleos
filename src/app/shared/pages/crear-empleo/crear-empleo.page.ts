@@ -10,6 +10,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class CrearEmpleoPage implements OnInit {
 
+  distance: number;
   empleo: Empleo = new Empleo
 
   base64Image: any;
@@ -43,5 +44,13 @@ export class CrearEmpleoPage implements OnInit {
     console.log("imagen cargada");
     console.log(JSON.stringify(e));
     this.empleo.image = e;
+  }
+
+  calcularDistancia(data) {
+    let p = 0.017453292;
+    let c = Math.cos;
+    let a = 0.5 - c((data.lat1 - data.lat2) * p) / 2 + c(data.lat1 * p) * (1 - c(((data.lon1 - data.lon2) * p))) / 2;
+    let dis = (12742 * Math.asin(Math.sqrt(a)));
+    this.distance = Math.trunc(dis);
   }
 }

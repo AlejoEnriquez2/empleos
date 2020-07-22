@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import {Camera} from '@ionic-native/camera/ngx';
 
@@ -32,6 +33,7 @@ import {Camera} from '@ionic-native/camera/ngx';
     StatusBar,
     SplashScreen,
     Camera,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

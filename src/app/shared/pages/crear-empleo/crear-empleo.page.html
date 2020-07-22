@@ -30,4 +30,7 @@
   <div class="ion-padding">
       <ion-button expand="block" type="submit" (click)="guardarEmpleo()">Crear empleo</ion-button>
   </div>
+
+  <app-geolocal-distance (obtenerDatos)="calcularDistancia($event)"></app-geolocal-distance>
+  <h3>Distancia: {{distance}}</h3>
 </ion-content>

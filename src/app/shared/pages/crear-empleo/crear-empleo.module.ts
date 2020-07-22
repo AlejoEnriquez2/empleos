@@ -8,6 +8,7 @@ import { CrearEmpleoPageRoutingModule } from './crear-empleo-routing.module';
 
 import { CrearEmpleoPage } from './crear-empleo.page';
 import { ImageUploadComponent } from 'src/app/components/image-upload/image-upload.component';
+import { GeolocalDistanceComponent } from '../../../components/geolocal-distance/geolocal-distance.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { ImageUploadComponent } from 'src/app/components/image-upload/image-uplo
     IonicModule,
     CrearEmpleoPageRoutingModule
   ],
-  declarations: [CrearEmpleoPage, ImageUploadComponent],
-  exports: [ImageUploadComponent]
+  declarations: [CrearEmpleoPage, ImageUploadComponent, GeolocalDistanceComponent],
+  exports: [ImageUploadComponent, GeolocalDistanceComponent]
 })
 export class CrearEmpleoPageModule {}
